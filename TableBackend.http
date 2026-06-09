@@ -1,0 +1,17 @@
+@TableBackend_HostAddress = http://localhost:5295
+
+GET {{TableBackend_HostAddress}}/Api/Table/Columns
+Accept: application/json
+
+###
+GET {{TableBackend_HostAddress}}/Api/Table/Rows
+Accept: application/json
+
+
+###
+PUT {{TableBackend_HostAddress}}/Api/Table/UpdateCell
+Accept: application/json
+
+###
+GET {{TableBackend_HostAddress}}/Api/Table/Columns/Count
+Accept: application/json
