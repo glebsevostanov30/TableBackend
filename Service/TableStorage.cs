@@ -10,8 +10,10 @@ public class TableStorage : ITableStorage
     public TableStorage()
     {
         Table = new DataTable();
-        Table.Columns.Add("Имя", typeof(string));
-        Table.Columns.Add("Фамилия", typeof(string));
+        for (int i = 0; i < 2; i++)
+        {
+            Table.Columns.Add($"Колонка {i+1}", typeof(string));
+        }
         // Заполним 1 000 000 строк тестовыми данными
         for (int i = 0; i < 1_000_000; i++)
         {
