@@ -8,7 +8,19 @@ namespace TableBackend.Controller.Table;
 [Route("Api/Table/Rows")]
 public class RowController(ITableStorage storage) : ControllerBase
 {
-
+    // Получение метаданных
+    [HttpGet("metadata")]
+    public IActionResult GetMetadata()
+    {
+        return Ok(new
+        {
+            rowCount = storage.Table.Rows.Count,
+            columns = storage.Table.Columns.Cast<DataColumn>()
+                .Select(c => new { title = c.ColumnName, width = 150 })
+                .ToList()
+        });
+    }
+    
     [HttpGet]
     public IActionResult Rows([FromQuery] int skip = 0, [FromQuery] int take = 100)
     {

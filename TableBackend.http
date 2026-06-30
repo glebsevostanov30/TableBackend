@@ -22,4 +22,8 @@ Accept: application/json
 
 ###
 GET {{TableBackend_HostAddress}}/Api/Table/Cell
+Accept: application/json###
+
+###
+GET {{TableBackend_HostAddress}}/Api/Table/Cell
 Accept: application/json
