@@ -8,11 +8,6 @@ GET {{TableBackend_HostAddress}}/Api/Table/Rows
 Accept: application/json
 
 ###
-GET {{TableBackend_HostAddress}}/Api/Table/Rows/Count
-Accept: application/json
-
-
-###
 PUT {{TableBackend_HostAddress}}/Api/Table/UpdateCell
 Accept: application/json
 
@@ -20,10 +15,7 @@ Accept: application/json
 GET {{TableBackend_HostAddress}}/Api/Table/Columns/Count
 Accept: application/json
 
-###
-GET {{TableBackend_HostAddress}}/Api/Table/Cell
-Accept: application/json###
 
 ###
-GET {{TableBackend_HostAddress}}/Api/Table/Cell
+POST {{TableBackend_HostAddress}}/Api/Upload
 Accept: application/json
