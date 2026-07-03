@@ -15,11 +15,4 @@ public class ColumnsController(ITableStorage storage) : ControllerBase
             .Select(c => new { title = c.ColumnName, id = c.ColumnName });
         return Ok(cols);
     }
-    
-    [HttpGet("Count")]
-    public IActionResult ColumnsCount()
-    {
-        var cols = storage.Table.Columns.Count;
-        return Ok(cols);
-    }
 }

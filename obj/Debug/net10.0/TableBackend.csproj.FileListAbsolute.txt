@@ -31,3 +31,4 @@ C:\Users\Gleb\TableBackend\obj\Debug\net10.0\refint\TableBackend.dll
 C:\Users\Gleb\TableBackend\obj\Debug\net10.0\TableBackend.pdb
 C:\Users\Gleb\TableBackend\obj\Debug\net10.0\TableBackend.genruntimeconfig.cache
 C:\Users\Gleb\TableBackend\obj\Debug\net10.0\ref\TableBackend.dll
+C:\Users\Gleb\TableBackend\obj\Debug\net10.0\TableBackend.sourcelink.json
