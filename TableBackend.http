@@ -17,5 +17,5 @@ Accept: application/json
 
 
 ###
-POST {{TableBackend_HostAddress}}/Api/Upload
+POST {{TableBackend_HostAddress}}/Api/Table/Upload
 Accept: application/json
