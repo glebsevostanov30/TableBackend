@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TableBackend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+167a2180280b3284452d712b07a3bab0697a4e02")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ea6dbeed9bf6ac4283f14b1e89b0c6d1b74e6289")]
 [assembly: System.Reflection.AssemblyProductAttribute("TableBackend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TableBackend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,0 +1,28 @@
+﻿    /*
+    Postman test for receiving emails on API:
+    
+    * POST http://localhost:8080/api/receive-emails
+    
+    {
+      "host": "imap.gmail.com", 
+      "port": "993",
+      "username": "x.x@gmail.com",
+      "password": "xxx",
+      "folder": "INBOX"
+    }
+    */
+    
+    /*
+    Postman test for sending an email:
+    
+    POST http://localhost:8080/api/send-email
+    {
+      "host": "smtp.gmail.com",
+      "port": "465",
+      "username": "x.x@gmail.com",
+      "password": "xxx",
+      "to": "y.y@gmail.com",
+      "subject": "ReactMail - Test Email",
+      "body": "This is a test email from ReactMail"
+    }
+    */
