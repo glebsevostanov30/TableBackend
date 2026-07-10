@@ -1,24 +1,37 @@
 {
   "version": 2,
-  "dgSpecHash": "48mYJkMcpIw=",
+  "dgSpecHash": "fnlfjvEBNTY=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Gleb\\TableBackend\\TableBackend.csproj",
+  "projectFilePath": "C:\\Users\\Administrator\\RiderProjects\\TableBackend\\TableBackend.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Gleb\\.nuget\\packages\\bouncycastle.cryptography\\2.6.2\\bouncycastle.cryptography.2.6.2.nupkg.sha512",
-    "C:\\Users\\Gleb\\.nuget\\packages\\mailkit\\4.17.0\\mailkit.4.17.0.nupkg.sha512",
-    "C:\\Users\\Gleb\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.5\\microsoft.aspnetcore.openapi.10.0.5.nupkg.sha512",
-    "C:\\Users\\Gleb\\.nuget\\packages\\microsoft.openapi\\2.0.0\\microsoft.openapi.2.0.0.nupkg.sha512",
-    "C:\\Users\\Gleb\\.nuget\\packages\\mimekit\\4.17.0\\mimekit.4.17.0.nupkg.sha512",
-    "C:\\Users\\Gleb\\.nuget\\packages\\system.security.cryptography.pkcs\\10.0.0\\system.security.cryptography.pkcs.10.0.0.nupkg.sha512"
+    "C:\\Users\\Administrator\\.nuget\\packages\\bouncycastle.cryptography\\2.6.2\\bouncycastle.cryptography.2.6.2.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\mailkit\\4.17.0\\mailkit.4.17.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.5\\microsoft.aspnetcore.openapi.10.0.5.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.aspnetcore.signalr\\1.2.11\\microsoft.aspnetcore.signalr.1.2.11.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.openapi\\2.0.0\\microsoft.openapi.2.0.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\mimekit\\4.17.0\\mimekit.4.17.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\system.security.cryptography.pkcs\\10.0.0\\system.security.cryptography.pkcs.10.0.0.nupkg.sha512"
   ],
   "logs": [
+    {
+      "code": "NU1510",
+      "level": "Warning",
+      "message": "PackageReference Microsoft.AspNetCore.SignalR will not be pruned. Consider removing this package from your dependencies, as it is likely unnecessary.",
+      "projectPath": "C:\\Users\\Administrator\\RiderProjects\\TableBackend\\TableBackend.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\Administrator\\RiderProjects\\TableBackend\\TableBackend.csproj",
+      "libraryId": "Microsoft.AspNetCore.SignalR",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
     {
       "code": "NU1903",
       "level": "Warning",
       "message": "Package 'Microsoft.OpenApi' 2.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-v5pm-xwqc-g5wc",
-      "projectPath": "C:\\Users\\Gleb\\TableBackend\\TableBackend.csproj",
+      "projectPath": "C:\\Users\\Administrator\\RiderProjects\\TableBackend\\TableBackend.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\Gleb\\TableBackend\\TableBackend.csproj",
+      "filePath": "C:\\Users\\Administrator\\RiderProjects\\TableBackend\\TableBackend.csproj",
       "libraryId": "Microsoft.OpenApi",
       "targetGraphs": [
         "net10.0"

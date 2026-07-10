@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EmailConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Settings>
+    <ImapServer>imap.yandex.ru</ImapServer>
+    <ImapPort>993</ImapPort>
+    <ImapUseSsl>true</ImapUseSsl>
+    <SmtpServer>smtp.yandex.ru</SmtpServer>
+    <SmtpPort>465</SmtpPort>
+    <SmtpUseSsl>true</SmtpUseSsl>
+    <EmailAddress>Programm-Python@yandex.ru</EmailAddress>
+    <Password>kqvtoquajahfflje</Password>
+    <LocalDirectoryDownload>Download</LocalDirectoryDownload>
+    <EmailDirectoryDownload>Работа</EmailDirectoryDownload>
+  </Settings>
+</EmailConfiguration>

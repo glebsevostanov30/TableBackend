@@ -5,6 +5,7 @@ using MailKit.Net.Imap;
 using MailKit.Search;
 using MailKit.Security;
 using MimeKit;
+using Org.BouncyCastle.Crypto.Operators;
 using TableBackend.Config.XML;
 using TableBackend.Dto.email;
 
@@ -295,24 +296,32 @@ public partial class MailReceiver
     {
         return Task.Run(async () => await ReceiveMailAsListAsync()).Result;
     }
-    
-    public static async Task<IList<IMailFolder>> GetFolders()
+
+    public static async Task<IList<EmailFolder>> GetFolders()
     {
         using var client = new ImapClient();
         var config = XmlSettingService.LoadSettings(XmlConfigs.Email).Settings;
-        
-        var personalNamespace = client.PersonalNamespaces[0];
-        
+
         // Connect to the IMAP server
         await client.ConnectAsync(config.ImapServer, config.ImapPort, config.ImapUseSsl);
 
         // Authenticate
         await client.AuthenticateAsync(config.EmailAddress, config.Password);
-        
-        return await client.GetFoldersAsync(personalNamespace);
+
+        var personalNamespace = client.PersonalNamespaces[0];
+
+        var folders = await client.GetFoldersAsync(personalNamespace);
+
+        var emailFolders = folders.Select(folder => new EmailFolder
+            {
+                Name = folder.Name,
+            }
+        ).ToList();
+
+        return emailFolders;
     }
-    
-    public static IList<IMailFolder> GetFoldersSync()
+
+    public static IList<EmailFolder> GetFoldersSync()
     {
         return Task.Run(async () => await GetFolders()).Result;
     }

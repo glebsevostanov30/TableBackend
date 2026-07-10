@@ -10,14 +10,15 @@ public class TableStorage : ITableStorage
     public TableStorage()
     {
         Table = new DataTable();
-        for (int i = 0; i < 2; i++)
+        for (var i = 0; i < 2; i++)
         {
-            Table.Columns.Add($"Колонка {i+1}", typeof(string));
+            Table.Columns.Add($"Колонка {i + 1}", typeof(string));
         }
+
         // Заполним 1 000 000 строк тестовыми данными
-        for (int i = 0; i < 1_000_000; i++)
+        for (var i = 0; i < 100; i++)
         {
-            Table.Rows.Add($"Имя {i+1}", $"Фамилия {i+1}");
+            Table.Rows.Add($"Имя {i + 1}", $"Фамилия {i + 1}");
         }
     }
 
@@ -27,6 +28,7 @@ public class TableStorage : ITableStorage
         {
             Table.Rows[row][colName] = value;
         }
+
         return Task.CompletedTask;
     }
 }
