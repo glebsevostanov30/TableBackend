@@ -60,35 +60,6 @@ public class EmailController : ControllerBase
         }
     }
 
-    [HttpPost("receive-emails")]
-    public IActionResult ReceiveEmails()
-    {
-        try
-        {
-            var messages = MailReceiver.ReceiveMailAsList();
-
-            foreach (var message in messages)
-            {
-                if (message.Attachments == null) continue;
-                
-                foreach (var attachment in message.Attachments)
-                {
-                    var attachmentId = Guid.NewGuid().ToString();
-                    attachment.Id = attachmentId;
-
-                    AttachmentCache[attachmentId] = attachment;
-                }
-            }
-
-            return Ok(messages);
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e.ToString());
-            return StatusCode(500, new List<EmailMessage>());
-        }
-    }
-
     [HttpGet("download-attachment/{id}")]
     public IActionResult DownloadAttachment(string id)
     {

@@ -11,9 +11,6 @@ using TableBackend.Dto.email;
 
 namespace TableBackend.Service.Email;
 
-/// <summary>
-/// MailReceiver service that retrieves the latest emails from a specified IMAP folder
-/// </summary>
 public partial class MailReceiver
 {
     private const int MaxMessagesToRetrieve = 10;
@@ -26,17 +23,6 @@ public partial class MailReceiver
     [GeneratedRegex("\\s+")]
     private static partial Regex PlainTextWithoutSpace();
 
-    /// <summary>
-    /// Retrieves the most recent emails from the specified IMAP folder
-    /// </summary>
-    /// <param name="host">IMAP server host</param>
-    /// <param name="port">IMAP server port</param>
-    /// <param name="username">Email account username</param>
-    /// <param name="password">Email account password</param>
-    /// <param name="folderName">Folder to retrieve emails from (defaults to INBOX)</param>
-    /// <returns>List of email messages</returns>
-    /// <exception cref="ImapProtocolException">Thrown when IMAP protocol error occurs</exception>
-    /// <exception cref="AuthenticationException">Thrown when authentication fails</exception>
     public static async Task<List<EmailMessage>> ReceiveMailAsListAsync()
     {
         var emailMessages = new List<EmailMessage>();
@@ -91,7 +77,7 @@ public partial class MailReceiver
     /// </summary>
     private static async Task<IList<MimeMessage>> GetRecentMessagesAsync(IMailFolder folder)
     {
-        // Get total message count
+        // Get total message count  
         var totalCount = folder.Count;
 
         if (totalCount == 0)
